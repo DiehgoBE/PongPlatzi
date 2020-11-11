@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,11 +36,54 @@ public class PlayerMovement : MonoBehaviour
         //transform.position = new Vector3(transform.position.x, mousePos.y, transform.position.z);
 
         //Definir el limite max y min del Eje Y para evitar que se salga de la pantalla
-        transform.position = new Vector3(transform.position.x, Mathf.Clamp(mousePos.y,-3.4f,3.4f), transform.position.z);
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(mousePos.y,-3.8f,3.8f), transform.position.z);
 
 
 
 
 
     }
+
+
+    //Posible solución No HardCode
+    /*SpriteRenderer playerSpriteRender;
+
+    void Start()
+    {
+        playerSpriteRender = GetComponent<SpriteRenderer>();
+    }
+
+    void Update()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.x = transform.position.x;
+        mousePos.y = Mathf.Clamp(mousePos.y, LimitDown(), LimitUp());
+        mousePos.z = transform.position.z;
+        transform.position = mousePos;
+    }
+
+    float LimitDown()
+    {
+        return -CameraBounds().y + playerSpriteRender.bounds.extents.y - 0.2f;
+    }
+
+    float LimitUp()
+    {
+        return CameraBounds().y - playerSpriteRender.bounds.extents.y + 0.2f;
+    }
+
+    Vector2 CameraBounds()
+    {
+        return Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+    }
+    */
+
+
+
+
+
+
+
+
+
 }
