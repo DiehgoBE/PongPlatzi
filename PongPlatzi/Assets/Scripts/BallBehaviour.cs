@@ -12,6 +12,9 @@ public class BallBehaviour : MonoBehaviour
     //False: aún no inicia
     //True: ya inició
     bool gameStarted = false;
+
+    //Creamos una variable publica para tener acceso a las caracteristicas de Rigidbody2D
+    public Rigidbody2D rbBall;
     
     // Start is called before the first frame update
     void Start()
@@ -39,6 +42,12 @@ public class BallBehaviour : MonoBehaviour
             //El clic izquierdo es 0
             if (Input.GetMouseButtonDown(0)) 
             {
+                //Damos velocidad al rigidbody de la pelota
+                //Dependiendo los valores que se colocan en el vector2 (x,y) será la inclinación del vector
+                //Tiene una dirección y una magnitud
+                rbBall.velocity = new Vector2(8,8);
+
+                //De esta forma damos inicio al juego
                 gameStarted = true;
             }
 
