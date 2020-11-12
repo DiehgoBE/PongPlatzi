@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Deguggear para ver en donde se encuentra nuestra posición del mouse
-        Debug.Log(Input.mousePosition); 
+        //Debug.Log(Input.mousePosition); 
 
         //Asignar la posición del mouse (Pixel Coordenates) a la posición del transform (X,Y,Z) (World Coordenates)
         //transform.position = Input.mousePosition; 
