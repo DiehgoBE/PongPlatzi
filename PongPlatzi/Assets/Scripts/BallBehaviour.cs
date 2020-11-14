@@ -11,15 +11,26 @@ public class BallBehaviour : MonoBehaviour
     //Definir si nuestro juego ya ha iniciado
     //False: aún no inicia
     //True: ya inició
-    bool gameStarted = false;
+    //bool gameStarted = false;
+
+    //Necesitamos acceder a la variable desde otro script por lo que la hacemos publica
+    //De esta forma poder reiniciar nuestro juego según las condiciones que definamos
+    public bool gameStarted = false;
+
 
     //Creamos una variable publica para tener acceso a las caracteristicas de Rigidbody2D
     public Rigidbody2D rbBall;
-    
+
+    //No podemos definir variables dentro de Start porque sino Update no los detecta
+    float posDif = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Al tener la diferencia que define el lugar de incio de la pelota en el Update
+        //Hace que se coloqué muy lejos de la pelota porque la posición de la pelota ahora es más lejana de la paleta
+        //Por lo tanto tenenmos que definirla fuera del Update para que se ejecute una vez en el Start.
+        posDif = paddle.position.x - transform.position.x;
     }
 
     // Update is called once per frame
@@ -29,7 +40,7 @@ public class BallBehaviour : MonoBehaviour
         if (!gameStarted) //Si aún no inicia el juego que la pelota siga a la paleta
         {
             //Definir la posición de Ball enfrente de Paddle
-            float posDif = paddle.position.x - transform.position.x;
+            //float posDif = paddle.position.x - transform.position.x;
 
             //Hacemos que la posicion del game object Ball se igual a la posicion del game object Paddle
             //transform.position =paddle.position;
