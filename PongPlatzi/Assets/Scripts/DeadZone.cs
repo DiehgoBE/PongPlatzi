@@ -58,6 +58,10 @@ public class DeadZone : MonoBehaviour
         //Puede ser desde el Update o cuando suceda un evento determinado
         CheckScore();
 
+        //Agregamos el efecto de sonido cuando se haga un punto
+        GetComponent<AudioSource>().Play();
+
+
     }
 
     //Creamos una función que me permita verificar mediante una condicional

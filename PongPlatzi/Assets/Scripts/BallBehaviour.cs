@@ -24,6 +24,11 @@ public class BallBehaviour : MonoBehaviour
     //No podemos definir variables dentro de Start porque sino Update no los detecta
     float posDif = 0;
 
+    //Para poder acceder al componente de audio podemos hacerlo de dos maneras:
+    //Crear una variable publica que referencie al audio Source
+    //ó usar GetComponent
+    public AudioSource ballAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +41,6 @@ public class BallBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (!gameStarted) //Si aún no inicia el juego que la pelota siga a la paleta
         {
             //Definir la posición de Ball enfrente de Paddle
@@ -64,10 +68,13 @@ public class BallBehaviour : MonoBehaviour
 
 
         }
-
-
-
-
-
     }
+
+    //Creamos una función collider para que cada vez que se de el evento de colisión
+    //suene el efecto de sonido
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        ballAudio.Play();
+    }
+
 }
