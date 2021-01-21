@@ -1,7 +1,5 @@
 Pong Platzi
 =============
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
-
 ### Descripción
 Demo del juego de Ping Pong como parte del Curso de Programación de Videojuegos 2D con Unity - Platzi. El videojuego consiste en recrear el videjojuego Ping Pong como un ejercicio práctico para poder conocer las herramientas que brinda Unity.
 
