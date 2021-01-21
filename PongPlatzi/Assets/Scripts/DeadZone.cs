@@ -24,7 +24,7 @@ public class DeadZone : MonoBehaviour
     int scorePlayerQuantity;
     int scoreEnemyQuantity;
 
-    //Creamos una variable que sea del tipo de dato de nuestro script de cambio de escena
+    //Creamos una variable pública que sea del tipo de dato de nuestro script de cambio de escena
     //De esta forma poder referenciarla desde Unity
     public SceneChanger sceneChanger;
                      

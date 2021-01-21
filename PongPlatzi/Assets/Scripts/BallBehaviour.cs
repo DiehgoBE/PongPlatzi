@@ -34,7 +34,7 @@ public class BallBehaviour : MonoBehaviour
     {
         //Al tener la diferencia que define el lugar de incio de la pelota en el Update
         //Hace que se coloqué muy lejos de la pelota porque la posición de la pelota ahora es más lejana de la paleta
-        //Por lo tanto tenenmos que definirla fuera del Update para que se ejecute una vez en el Start.
+        //Por lo tanto tenemos que definirla fuera del Update para que se ejecute una vez en el Start.
         posDif = paddle.position.x - transform.position.x;
     }
 
