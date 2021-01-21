@@ -1,5 +1,6 @@
 Pong Platzi
 =============
+
 ### Descripción
 Demo del juego de Ping Pong como parte del Curso de Programación de Videojuegos 2D con Unity - Platzi. El videojuego consiste en recrear el videjojuego Ping Pong como un ejercicio práctico para poder conocer las herramientas que brinda Unity.
 
@@ -14,6 +15,6 @@ Demo del juego de Ping Pong como parte del Curso de Programación de Videojuegos
 - Cuenta con una transición entre escenas para mostrar si el Player ganó o perdió la partida.
 - Se agregó efectos de sonido para la colisión de la pelota con las paletas, anotación de puntos y sonido de ambiente en el juego.
 
+### GamePlay
 
-###GamePlay
 <a href="https://imgur.com/Gin2BLQ"><img src="https://i.imgur.com/Gin2BLQ.gif" title="source: imgur.com" /></a>
